@@ -2,18 +2,18 @@ package main
 
 import (
     "fyne.io/fyne/v2"
-	"fyne.io/fyne/v2/internal/color"
 	"fyne.io/fyne/v2/theme"
+	"image/color"
 )
 type myTheme struct {}
 var _ fyne.Theme = (*myTheme)(nil)
-// func (m myTheme) Icon(name fyne.ThemeIconName) fyne.Resource {
-// 	if name == theme.IconNameHome {
-// 		return fyne.NewStaticResource("myHome", homeBytes)
-// 	}
+func (m myTheme) Icon(name fyne.ThemeIconName) fyne.Resource {
+	if name == theme.IconNameHome {
+		return fyne.NewStaticResource("myHome", []byte{})
+	}
 	
-// 	return theme.DefaultTheme().Icon(name)
-// }
+	return theme.DefaultTheme().Icon(name)
+}
 func (m myTheme) Font(style fyne.TextStyle) fyne.Resource {
 	return theme.DefaultTheme().Font(style)
 }

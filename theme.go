@@ -25,7 +25,7 @@ func (m myTheme) Size(name fyne.ThemeSizeName) float32 {
 func (m myTheme) Color(name fyne.ThemeColorName, variant fyne.ThemeVariant) color.Color {
 	if name == theme.ColorNameBackground {
 		if variant == theme.VariantLight {
-			return color.White
+			return color.Black
 		}
 		return color.Black
 	}

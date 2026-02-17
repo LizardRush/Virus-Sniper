@@ -1,3 +1,3 @@
 package main
 
-import "UI/home.go"
+import "./UI/home.go"

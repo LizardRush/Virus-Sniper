@@ -10,6 +10,8 @@ func main() {
     a := app.New()
     w := a.NewWindow("Hello Fyne!")
 
+    a.Settings().SetTheme(&myTheme{})
+
     hello := widget.NewLabel("Hello Fyne!")
     w.SetContent(container.NewVBox(
         hello,

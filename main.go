@@ -9,18 +9,20 @@ import (
 
 func main() {
     a := app.New()
-    w := a.NewWindow("Hello Fyne!")
+    for i := 0; i < 10; i++ {
+		w := a.NewWindow("Hello Fyne!")
 
-    a.Settings().SetTheme(&myTheme{})
+        a.Settings().SetTheme(&myTheme{})
 
-    hello := widget.NewLabel("Hello Fyne!")
-    w.SetContent(container.NewVBox(
-        hello,
-        widget.NewButton("Hi!", func() {
-            hello.SetText("beesechurgur")
-        }),
-    ))
-    w.Resize(fyne.NewSize(500, 100))
+        hello := widget.NewLabel("Hello Fyne!")
+        w.SetContent(container.NewVBox(
+            hello,
+            widget.NewButton("Hi!", func() {
+                hello.SetText("beesechurgur")
+            }),
+        ))
+        w.Resize(fyne.NewSize(500, 100))
 
-    w.ShowAndRun()
+        w.ShowAndRun()
+        }
 }
